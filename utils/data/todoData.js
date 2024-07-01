@@ -22,9 +22,17 @@ const getSingleTask = (id) => new Promise((resolve, reject) => {
       'Content-Type': 'application/json',
     },
   })
-    .then((response) => response.json())
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
     .then((data) => resolve(data))
-    .catch(reject);
+    .catch((error) => {
+      console.error('Error fetching single task:', error);
+      reject(error);
+    });
 });
 
 const getTasks = () => new Promise((resolve, reject) => {
@@ -47,9 +55,20 @@ const updateTask = (id, task) => new Promise((resolve, reject) => {
     },
     body: JSON.stringify(task),
   })
-    .then((response) => response.json())
-    .then((data) => resolve(data))
-    .catch(reject);
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+    //   return response.json();
+    })
+    .then((data) => {
+      console.log('Update Task Response:', data); // Log the response data
+      resolve(data);
+    })
+    .catch((error) => {
+      console.error('Error updating task:', error);
+      reject(error);
+    });
 });
 
 const deleteTask = (id) => new Promise((resolve, reject) => {
@@ -59,7 +78,6 @@ const deleteTask = (id) => new Promise((resolve, reject) => {
       'Content-Type': 'application/json',
     },
   })
-    .then((response) => response.json())
     .then((data) => resolve(data))
     .catch(reject);
 });
