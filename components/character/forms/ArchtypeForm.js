@@ -5,7 +5,7 @@ import {
   Button, Form, FormLabel, FloatingLabel,
 } from 'react-bootstrap';
 import {
-  createArchtype, getSingleArchtype, updateArchtype,
+  createArchtype, updateArchtype,
 } from '../../../utils/data/archtypeData';
 
 const initialState = {
@@ -34,12 +34,12 @@ export default function ArchtypeForm({ archtype, id }) {
 
   useEffect(() => {
     if (archtype) {
-      console.log('Fetched Archtype:', archtype); // Add console log to check fetched archtype
+      // console.log('Fetched Archtype:', archtype); // Add console log to check fetched archtype
       const attributes = archtype.archetype_attributes.map((attr) => ({
         name: attr.attribute_name,
         code: attr.attribute_code,
       }));
-      console.log('Mapped Attributes:', attributes); // Add console log to check mapped attributes
+      // console.log('Mapped Attributes:', attributes); // Add console log to check mapped attributes
 
       setCurrentArchtype({
         name: archtype.archetype_name,
