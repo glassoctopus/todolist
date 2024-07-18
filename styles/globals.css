@@ -18,5 +18,98 @@ a {
 }
 
 body {
-  background-color: #88effd;
+  margin: 0;
+  overflow: hidden;
+  background: black;
+}
+
+/* StarField.css */
+#starfield {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1; /* Ensure the star field is behind other content */  
+}
+
+#stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+  pointer-events: none; /* work around to help ensure stars do not block interactions */
+}
+
+.content {
+  position: relative;
+  z-index: 1; 
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Todo Content */
+.todo-container {
+  position: relative;
+  z-index: 0; 
+}
+
+.todo-content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+}
+
+/* Hero Content */
+.hero-container {
+  position: relative;
+  z-index: 0; 
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+}
+
+/* NewTask.css */
+.new-task-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.new-task-content {
+  position: relative;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); 
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.form-control-sm {
+  height: calc(1.5em + 0.5rem + 2px);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  border-radius: 0.2rem;
 }

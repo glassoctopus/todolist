@@ -15,6 +15,7 @@ const TodoTable = ({ todos }) => {
 
   const deleteTodo = (id) => {
     deleteTask(id);
+    window.location.reload();
   };
 
   return (
