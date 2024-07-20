@@ -11,7 +11,7 @@ const initialState = {
   temporary_field: false,
 };
 
-export default function TodoForm({ taskObject }) {
+const TodoForm = ({ taskObject }) => {
   const router = useRouter();
   const [formInput, setFormInput] = useState(initialState);
 
@@ -88,7 +88,7 @@ export default function TodoForm({ taskObject }) {
       </Button>
     </Form>
   );
-}
+};
 
 TodoForm.propTypes = {
   user: PropTypes.shape({
@@ -106,3 +106,4 @@ TodoForm.propTypes = {
 TodoForm.defaultProps = {
   taskObject: initialState,
 };
+export default TodoForm;

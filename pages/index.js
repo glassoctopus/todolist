@@ -2,7 +2,7 @@ import { Button } from 'react-bootstrap';
 import { signOut } from '../utils/auth';
 import { useAuth } from '../utils/context/authContext';
 
-function Home() {
+const Home = () => {
   const { user } = useAuth();
   return (
     <div
@@ -22,6 +22,6 @@ function Home() {
       </Button>
     </div>
   );
-}
+};
 
 export default Home;

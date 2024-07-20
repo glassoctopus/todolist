@@ -5,7 +5,7 @@ import { getTasks } from '../../utils/data/todoData';
 import TodoTable from '../../components/TodoTable';
 import { useAuth } from '../../utils/context/authContext';
 
-function Todo() {
+const Todo = () => {
   const [todos, setTodos] = useState([]);
   const { user } = useAuth();
 
@@ -34,6 +34,6 @@ function Todo() {
       </div>
     </div>
   );
-}
+};
 
 export default Todo;

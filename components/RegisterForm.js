@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { registerUser } from '../utils/auth'; // Update with path to registerUser
 
-function RegisterForm({ user, updateUser }) {
+const RegisterForm = ({ user, updateUser }) => {
   const [formData, setFormData] = useState({
     bio: '',
     uid: user.uid,
@@ -27,7 +27,7 @@ function RegisterForm({ user, updateUser }) {
       </Button>
     </Form>
   );
-}
+};
 
 RegisterForm.propTypes = {
   user: PropTypes.shape({
