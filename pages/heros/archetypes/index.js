@@ -4,19 +4,19 @@ import { Button } from 'react-bootstrap';
 // import { useAuth } from '../../../utils/context/authContext';
 // import { getArchtypes } from '../../../utils/data/archtypeData';
 
-function Hero() {
+const Archetype = () =>
 //   const [archtype, setArchtype] = useState([]);
 //   const { user } = useAuth();
 
-  //   useEffect(() => {
-  //     if (user && user.uid) {
-  //       getArchtype().then((data) => {
-  //         setArchtype(data);
-  //       });
-  //     }
-  //   }, [user]);
-
-  return (
+//   useEffect(() => {
+//     if (user && user.uid) {
+//       getArchtype().then((data) => {
+//         setArchtype(data);
+//       });
+//     }
+//   }, [user]);
+  // eslint-disable-next-line implicit-arrow-linebreak
+  (
     <div className="hero-container">
       <div className="hero-content">
         <article className="Hero">
@@ -32,6 +32,5 @@ function Hero() {
       </div>
     </div>
   );
-}
 
-export default Hero;
+export default Archetype;

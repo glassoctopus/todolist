@@ -4,7 +4,7 @@ import TodoForm from '../../../components/TodoForm';
 import { useAuth } from '../../../utils/context/authContext';
 import { getSingleTask } from '../../../utils/data/todoData';
 
-export default function UpdateTask() {
+const UpdateTask = () => {
   const router = useRouter();
   const { id } = router.query;
   const { user } = useAuth();
@@ -22,4 +22,6 @@ export default function UpdateTask() {
       {task && <TodoForm user={user} taskObject={task} />}
     </div>
   );
-}
+};
+
+export default UpdateTask;

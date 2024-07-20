@@ -23,7 +23,7 @@ const initialState = {
   a_quote: '',
 };
 
-export default function ArchtypeForm({ archtype, id }) {
+const ArchtypeForm = ({ archtype, id }) => {
   const [currentArchtype, setCurrentArchtype] = useState(initialState);
   const router = useRouter();
 
@@ -267,7 +267,7 @@ export default function ArchtypeForm({ archtype, id }) {
       </Form>
     </>
   );
-}
+};
 
 ArchtypeForm.propTypes = {
   id: PropTypes.oneOfType([
@@ -292,3 +292,5 @@ ArchtypeForm.defaultProps = {
   id: null,
   archtype: null,
 };
+
+export default ArchtypeForm;

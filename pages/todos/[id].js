@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 import TodoCard from '../../components/TodoCard'; // Assuming you have a TodoCard component
 import { getSingleTask } from '../../utils/data/todoData'; // Adjust import based on your file structure
 
-export default function Todo() {
+const Todo = () => {
   const [task, setTask] = useState(null);
   const router = useRouter();
   const { id } = router.query;
@@ -41,4 +41,6 @@ export default function Todo() {
       </section>
     </article>
   );
-}
+};
+
+export default Todo;

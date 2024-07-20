@@ -4,7 +4,7 @@ import ArchtypeForm from '../../../../components/character/forms/ArchtypeForm';
 import { useAuth } from '../../../../utils/context/authContext';
 import { getSingleArchtype } from '../../../../utils/data/archtypeData';
 
-export default function NewArchType() {
+const NewArchetype = () => {
   const router = useRouter();
   const { id } = router.query;
   const { user } = useAuth();
@@ -21,4 +21,6 @@ export default function NewArchType() {
       </div>
     </div>
   );
-}
+};
+
+export default NewArchetype;

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Card, Button } from 'react-bootstrap';
 import { useRouter } from 'next/router';
 
-export default function EquipmentCard({
+const EquipmentCard = ({
   id,
   name,
   category,
@@ -22,7 +22,7 @@ export default function EquipmentCard({
   uses,
   useNotes,
   source,
-}) {
+}) => {
   const router = useRouter();
 
   const deleteThisEquipment = () => {
@@ -52,7 +52,6 @@ export default function EquipmentCard({
         <Card.Text>{description ? `Description: ${description}` : null}</Card.Text>
         <Card.Text>{useNotes ? `Use Notes: ${useNotes}` : null}</Card.Text>
         <Card.Text>{source ? `Source: ${source}` : null}</Card.Text>
-
         <Link href={`/equipment/${id}`} passHref>
           <Button variant="primary" className="m-2">VIEW</Button>
         </Link>
@@ -66,7 +65,7 @@ export default function EquipmentCard({
       <Card.Footer className="text-muted">Source: {source}</Card.Footer>
     </Card>
   );
-}
+};
 
 EquipmentCard.propTypes = {
   id: PropTypes.number,
@@ -107,3 +106,5 @@ EquipmentCard.defaultProps = {
   useNotes: '',
   source: '',
 };
+
+export default EquipmentCard;

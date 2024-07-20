@@ -23,7 +23,7 @@ const initialState = {
   a_guote: '',
 };
 
-export default function HeroForm({ hero, id }) {
+const HeroForm = ({ hero, id }) => {
   const [currentHero, setCurrentHero] = useState(initialState);
   const router = useRouter();
   // const { Hero, HeroLoading } = useAuth();
@@ -335,7 +335,7 @@ export default function HeroForm({ hero, id }) {
     </>
   );
   //
-}
+};
 
 HeroForm.propTypes = {
   id: PropTypes.oneOfType([
@@ -363,3 +363,5 @@ HeroForm.defaultProps = {
   id: null,
   hero: null,
 };
+
+export default HeroForm;

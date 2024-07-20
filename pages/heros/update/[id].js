@@ -4,7 +4,7 @@ import HeroForm from '../../../components/character/forms/HeroForm';
 import { useAuth } from '../../../utils/context/authContext';
 import { getSingleHero } from '../../../utils/data/heroData';
 
-export default function NewHero() {
+const NewHero = () => {
   const router = useRouter();
   const { id } = router.query;
   const { user } = useAuth();
@@ -19,4 +19,6 @@ export default function NewHero() {
       <HeroForm user={user} id={Number(id)} update={aHero} />
     </div>
   );
-}
+};
+
+export default NewHero;
