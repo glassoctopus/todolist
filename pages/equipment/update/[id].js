@@ -13,7 +13,7 @@ const NewEquipnment = () => {
   useEffect(() => {
     if (id) {
       getSingleEquipment(id).then((data) => {
-        console.log('Fetched Data:', data);
+        // console.log('Fetched Data:', data);
         setAnEquipment(data);
       });
     }
