@@ -10,9 +10,7 @@ const SearchTextField = ({ placeholder, onSubmit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log('Form submitted with searchTerm:', searchTerm);
     if (typeof onSubmit === 'function') {
-      // console.log('Calling onSubmit with:', searchTerm.trim());
       onSubmit(searchTerm.trim());
     } else {
       console.error('onSubmit is not a function');

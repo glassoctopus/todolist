@@ -54,7 +54,7 @@ const HeroForm = ({ hero, id }) => {
     const { name, value } = e.target;
     setCurrentHero((prevState) => ({
       ...prevState,
-      [name]: value,
+      [name]: value || '',
     }));
   };
 
@@ -287,7 +287,7 @@ const HeroForm = ({ hero, id }) => {
                         placeholder="objectives"
                         name="objectives"
                         required
-                        value={currentHero.personality}
+                        value={currentHero.objectives}
                         onChange={handleChange}
                         style={{ height: '69px' }}
                       />
@@ -304,7 +304,7 @@ const HeroForm = ({ hero, id }) => {
                         placeholder="a_quote"
                         name="a_quote"
                         required
-                        value={currentHero.a_quote}
+                        value={currentHero.a_quote || ''}
                         onChange={handleChange}
                         style={{ height: '33px' }}
                       />
