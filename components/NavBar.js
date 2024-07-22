@@ -13,7 +13,7 @@ const NavBar = () => (
   <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
     <Container>
       <Link passHref href="/todos">
-        <Navbar.Brand>My List of To-dos </Navbar.Brand>
+        <Navbar.Brand>My List of To-dos</Navbar.Brand>
       </Link>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
@@ -36,6 +36,9 @@ const NavBar = () => (
           </Link>
           <Link passHref href="/equipment/new">
             <Nav.Link>New Equipment</Nav.Link>
+          </Link>
+          <Link passHref href="/skills">
+            <Nav.Link>skills</Nav.Link>
           </Link>
           <Button variant="danger" onClick={signOut}>
             Sign Out

@@ -61,7 +61,7 @@ const Equipment = () => {
         <h1>equipments</h1>
         <Button
           onClick={() => {
-            router.push('/equipments/new');
+            router.push('/equipment/new');
           }}
         >
           Register New equipment

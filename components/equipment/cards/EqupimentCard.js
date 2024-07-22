@@ -99,7 +99,7 @@ EquipmentCard.defaultProps = {
   description: '',
   availability: '',
   skill: '',
-  damage: 0,
+  damage: null,
   ammo: 0,
   charges: '',
   uses: '',
